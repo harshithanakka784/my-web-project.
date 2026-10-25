@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>LearnHub - Online Learning Platform</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fc;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        nav {
+            background: #252550;
+            color: white;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        nav h2 {
+            color: #70e1f5;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #70e1f5;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 75px 20px;
+            background: linear-gradient(135deg, #252550, #6257c5);
+            color: white;
+            animation: fadeIn 1.5s ease;
+        }
+
+        .hero h1 {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #70e1f5;
+            color: #252550;
+            padding: 12px 25px;
+            margin-top: 20px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: white;
+            transform: translateY(-4px);
+        }
+
+        section {
+            padding: 55px 8%;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 30px;
+            color: #252550;
+            margin-bottom: 30px;
+        }
+
+        .courses {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 18px #00000015;
+            transition: 0.3s;
+            animation: fadeIn 1s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px #00000025;
+        }
+
+        .thumbnail {
+            background: linear-gradient(135deg, #70e1f5, #6257c5);
+            color: white;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+        }
+
+        .card-content {
+            padding: 22px;
+        }
+
+        .card h3 {
+            color: #5145a5;
+            margin-bottom: 10px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #e9e8ff;
+            color: #5145a5;
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+
+        .progress {
+            height: 10px;
+            background: #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 12px 0;
+        }
+
+        .progress div {
+            height: 100%;
+            background: #6257c5;
+            border-radius: 10px;
+            animation: grow 1.5s ease;
+        }
+
+        .objectives {
+            background: #e9eaff;
+        }
+
+        .objectives ul {
+            max-width: 650px;
+            margin: auto;
+            padding-left: 25px;
+        }
+
+        .objectives li {
+            margin-bottom: 12px;
+        }
+
+        footer {
+            background: #252550;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes grow {
+            from {
+                width: 0;
+            }
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                justify-content: center;
+            }
+
+            nav ul {
+                justify-content: center;
+                gap: 12px;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            section {
+                padding: 40px 6%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h2>LearnHub</h2>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#instructors">Instructors</a></li>
+            <li><a href="#objectives">Objectives</a></li>
+            <li><a href="#progress">My Progress</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero" id="home">
+        <h1>Welcome to LearnHub</h1>
+
+        <p>Learn New Skills. Build Your Future.</p>
+
+        <p>Explore courses and learn at your own pace.</p>
+
+        <a href="#courses" class="btn">Explore Courses</a>
+    </header>
+
+    <section id="courses">
+        <h2 class="title">Popular Courses</h2>
+
+        <div class="courses">
+
+            <div class="card">
+                <div class="thumbnail">💻</div>
+
+                <div class="card-content">
+                    <span class="tag">Programming</span>
+                    <h3>Python Programming</h3>
+                    <p>Learn Python basics, variables, loops, and functions.</p>
+                    <p><strong>Instructor:</strong> Rahul Sharma</p>
+                    <p><strong>Duration:</strong> 6 weeks</p>
+                    <a href="#objectives" class="btn">View Course</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="thumbnail">🌐</div>
+
+                <div class="card-content">
+                    <span class="tag">Web Development</span>
+                    <h3>HTML and CSS</h3>
+                    <p>Learn to design and build responsive websites.</p>
+                    <p><strong>Instructor:</strong> Priya Kumar</p>
+                    <p><strong>Duration:</strong> 4 weeks</p>
+                    <a href="#objectives" class="btn">View Course</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="thumbnail">🤖</div>
+
+                <div class="card-content">
+                    <span class="tag">Artificial Intelligence</span>
+                    <h3>Introduction to AI</h3>
+                    <p>Explore AI concepts, applications, and tools.</p>
+                    <p><strong>Instructor:</strong> Anil Verma</p>
+                    <p><strong>Duration:</strong> 5 weeks</p>
+                    <a href="#objectives" class="btn">View Course</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="instructors">
+        <h2 class="title">Meet Our Instructors</h2>
+
+        <div class="courses">
+
+            <div class="card">
+                <div class="card-content">
+                    <h3>👨‍🏫 Rahul Sharma</h3>
+                    <p>Python Programming Instructor</p>
+                    <p>Focuses on beginner-friendly coding lessons.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <h3>👩‍🏫 Priya Kumar</h3>
+                    <p>Web Development Instructor</p>
+                    <p>Teaches HTML, CSS, and responsive design.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <h3>👨‍🏫 Anil Verma</h3>
+                    <p>Artificial Intelligence Instructor</p>
+                    <p>Introduces learners to AI technologies.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="objectives" id="objectives">
+        <h2 class="title">Learning Objectives</h2>
+
+        <ul>
+            <li>Understand basic programming concepts.</li>
+            <li>Create web pages using HTML and CSS.</li>
+            <li>Learn introductory artificial intelligence concepts.</li>
+            <li>Develop logical thinking and problem-solving skills.</li>
+            <li>Build small projects using the skills learned.</li>
+        </ul>
+    </section>
+
+    <section id="progress">
+        <h2 class="title">My Learning Progress</h2>
+
+        <div class="courses">
+
+            <div class="card">
+                <div class="card-content">
+                    <h3>Python Programming</h3>
+                    <p>Course completion: 60%</p>
+
+                    <div class="progress">
+                        <div style="width: 60%;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <h3>HTML and CSS</h3>
+                    <p>Course completion: 75%</p>
+
+                    <div class="progress">
+                        <div style="width: 75%;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <h3>Introduction to AI</h3>
+                    <p>Course completion: 35%</p>
+
+                    <div class="progress">
+                        <div style="width: 35%;"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 LearnHub. All Rights Reserved.</p>
+        <p>Keep Learning, Keep Growing!</p>
+    </footer>
+
+</body>
+</html>
