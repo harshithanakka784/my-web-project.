@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Harshitha | Personal Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6fb;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        nav {
+            background-color: #171738;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav h2 {
+            color: #ffffff;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #61dafb;
+        }
+
+        
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(135deg, #171738, #5145a5);
+            color: white;
+            animation: fadeIn 1.5s ease;
+        }
+
+        .hero h1 {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .hero span {
+            color: #61dafb;
+        }
+
+        .hero p {
+            font-size: 19px;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #61dafb;
+            color: #171738;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+            margin: 5px;
+        }
+
+        .btn:hover {
+            background-color: white;
+            transform: translateY(-4px);
+        }
+
+        
+        section {
+            padding: 65px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #292967;
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
+        .about {
+            text-align: center;
+            max-width: 850px;
+            margin: auto;
+        }
+
+        
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 22px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: fadeIn 1s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .card h3 {
+            color: #5145a5;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            margin-bottom: 8px;
+        }
+
+        
+        .skill {
+            margin-bottom: 20px;
+        }
+
+        .skill p {
+            font-weight: bold;
+            margin-bottom: 7px;
+        }
+
+        .progress {
+            height: 12px;
+            background-color: #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .progress div {
+            height: 100%;
+            background: linear-gradient(90deg, #5145a5, #61dafb);
+            border-radius: 10px;
+            animation: grow 1.5s ease;
+        }
+
+    
+        .contact {
+            background-color: #e9eafa;
+            text-align: center;
+        }
+
+        .contact p {
+            margin: 12px 0;
+        }
+
+        .contact a {
+            color: #5145a5;
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        
+        footer {
+            background-color: #171738;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+    
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes grow {
+            from {
+                width: 0;
+            }
+        }
+
+    
+        @media (max-width: 600px) {
+            nav {
+                justify-content: center;
+                text-align: center;
+            }
+
+            nav ul {
+                justify-content: center;
+                gap: 12px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            section {
+                padding: 45px 6%;
+            }
+
+            .section-title {
+                font-size: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <nav>
+        <h2>Harshitha.</h2>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <header class="hero" id="home">
+        <div>
+            <h1>Hello, I'm <span>Harshitha!</span></h1>
+
+            <p>First-Year CSE AI & ML Student</p>
+
+            <p>
+                I am passionate about technology, programming,
+                creativity, and learning new skills.
+            </p>
+
+            <a href="#about" class="btn">Explore My Portfolio</a>
+            <a href="#contact" class="btn">Contact Me</a>
+        </div>
+    </header>
+
+    
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+
+        <div class="about">
+            <p>
+                I am a first-year Computer Science Engineering student
+                specializing in Artificial Intelligence and Machine Learning.
+                I am interested in programming, web development, and AI.
+                My goal is to develop useful projects, improve my technical
+                knowledge, and become an inspiration to others.
+            </p>
+        </div>
+    </section>
+
+
+    <section id="education">
+        <h2 class="section-title">Educational Qualifications</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>B.Tech</h3>
+                <p><strong>College:</strong> NRI University</p>
+                <p><strong>Branch:</strong> CSE - AI & ML</p>
+                <p><strong>Status:</strong> First Year</p>
+            </div>
+
+            <div class="card">
+                <h3>Intermediate</h3>
+                <p><strong>College:</strong> Sri Chaitanya Junior College</p>
+                <p><strong>Status:</strong> Completed</p>
+            </div>
+
+            <div class="card">
+                <h3>Schooling</h3>
+                <p><strong>School:</strong> Nirmala High School</p>
+                <p><strong>Location:</strong> Vijayawada</p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="skills">
+        <h2 class="section-title">Technical Skills</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Python</h3>
+                <p>Learning programming fundamentals and problem-solving.</p>
+                <div class="progress">
+                    <div style="width: 45%;"></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>HTML</h3>
+                <p>Learning how to create and structure web pages.</p>
+                <div class="progress">
+                    <div style="width: 65%;"></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>CSS</h3>
+                <p>Learning website styling, layouts, and animations.</p>
+                <div class="progress">
+                    <div style="width: 45%;"></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Artificial Intelligence</h3>
+                <p>Exploring AI concepts and generative AI tools.</p>
+                <div class="progress">
+                    <div style="width: 30%;"></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="hobbies">
+        <h2 class="section-title">My Hobbies</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>🏸 Badminton</h3>
+                <p>I enjoy playing badminton and other outdoor games.</p>
+            </div>
+
+            <div class="card">
+                <h3>🎨 Art and Craft</h3>
+                <p>I enjoy creating handmade crafts and exploring my creativity.</p>
+            </div>
+
+            <div class="card">
+                <h3>💻 Learning</h3>
+                <p>I enjoy learning new technologies and improving my skills.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">My Projects</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Personal Portfolio</h3>
+                <p>
+                    A responsive personal website built using HTML and CSS
+                    to showcase my profile and skills.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>StudySync AI</h3>
+                <p>
+                    A student-focused website concept designed to support
+                    learning and improve study organization.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Flood Help</h3>
+                <p>
+                    An emergency support concept intended to help people
+                    communicate their needs during flash floods.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="achievements">
+        <h2 class="section-title">Achievements</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>🏅 Sports</h3>
+                <p>
+                    Participated in sports activities and earned medals
+                    in events such as badminton and running.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🌟 Personal Growth</h3>
+                <p>
+                    Continuously learning new skills and working toward
+                    my academic and professional goals.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="resume">
+        <h2 class="section-title">My Resume</h2>
+
+        <div class="about">
+            <p>
+                I am a motivated first-year CSE AI & ML student interested
+                in Python programming, web development, and artificial
+                intelligence. I am eager to learn, build projects,
+                and develop my technical skills.
+            </p>
+
+        
+            <a href="resume.pdf" class="btn" download>
+                Download My Resume
+            </a>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2 class="section-title">Contact Me</h2>
+
+        <p>Feel free to connect with me!</p>
+
+        <p><strong>Location:</strong> Vijayawada, Andhra Pradesh</p>
+
+        <p>
+            <strong>Email:</strong>
+            <a href="mailto:yourname@example.com">
+                yourname@example.com
+            </a>
+        </p>
+
+        <p>
+            <strong>LinkedIn:</strong>
+            <a href="https://www.linkedin.com/" target="_blank"
+               rel="noopener noreferrer">
+                Visit My LinkedIn
+            </a>
+        </p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Harshitha | Personal Portfolio Website</p>
+        <p>Designed with HTML and CSS ❤️</p>
+    </footer>
+
+</body>
+</html>
