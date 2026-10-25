@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>College Information Website</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        nav {
+            background: #123456;
+            color: white;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        nav h2 {
+            color: #ffcc66;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffcc66;
+        }
+
+        .banner {
+            background: linear-gradient(135deg, #123456, #247ba0);
+            color: white;
+            text-align: center;
+            padding: 90px 20px;
+            animation: fadeIn 1.5s ease;
+        }
+
+        .banner h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .banner p {
+            font-size: 18px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #ffcc66;
+            color: #123456;
+            padding: 12px 25px;
+            margin-top: 20px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: white;
+            transform: translateY(-4px);
+        }
+
+        section {
+            padding: 55px 8%;
+        }
+
+        .title {
+            text-align: center;
+            color: #123456;
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
+        .about {
+            text-align: center;
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px #00000015;
+            transition: 0.3s;
+            animation: fadeIn 1s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 22px #00000025;
+        }
+
+        .card h3 {
+            color: #247ba0;
+            margin-bottom: 12px;
+        }
+
+        .contact {
+            background: #e5eef7;
+            text-align: center;
+        }
+
+        footer {
+            background: #123456;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                justify-content: center;
+            }
+
+            nav ul {
+                justify-content: center;
+                gap: 12px;
+            }
+
+            .banner h1 {
+                font-size: 30px;
+            }
+
+            section {
+                padding: 40px 6%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h2>ABC College</h2>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#facilities">Facilities</a></li>
+            <li><a href="#admissions">Admissions</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="banner" id="home">
+        <h1>Welcome to ABC College</h1>
+        <p>Learn Today, Lead Tomorrow</p>
+        <p>Quality Education for a Bright Future</p>
+
+        <a href="#admissions" class="btn">Apply for Admission</a>
+    </header>
+
+    <section id="about">
+        <h2 class="title">About Our College</h2>
+
+        <div class="about">
+            <p>
+                ABC College provides quality education and encourages
+                students to develop knowledge, creativity, leadership,
+                and technical skills. Our goal is to prepare students
+                for successful careers and responsible citizenship.
+            </p>
+        </div>
+    </section>
+
+    <section id="courses">
+        <h2 class="title">Departments and Courses</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>💻 Computer Science</h3>
+                <p>B.Tech in Computer Science Engineering.</p>
+            </div>
+
+            <div class="card">
+                <h3>🤖 AI and Machine Learning</h3>
+                <p>Learn artificial intelligence and intelligent systems.</p>
+            </div>
+
+            <div class="card">
+                <h3>⚙️ Mechanical Engineering</h3>
+                <p>Explore machines, design, and manufacturing.</p>
+            </div>
+
+            <div class="card">
+                <h3>⚡ Electrical Engineering</h3>
+                <p>Study electrical systems and power technology.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="faculty">
+        <h2 class="title">Our Faculty</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Dr. Ravi Kumar</h3>
+                <p>Professor - Computer Science</p>
+            </div>
+
+            <div class="card">
+                <h3>Ms. Priya Sharma</h3>
+                <p>Assistant Professor - AI and ML</p>
+            </div>
+
+            <div class="card">
+                <h3>Mr. Arun Kumar</h3>
+                <p>Assistant Professor - Mathematics</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="facilities">
+        <h2 class="title">Campus Facilities</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>📚 Library</h3>
+                <p>A learning space with books and study resources.</p>
+            </div>
+
+            <div class="card">
+                <h3>🖥️ Computer Labs</h3>
+                <p>Facilities for programming and practical learning.</p>
+            </div>
+
+            <div class="card">
+                <h3>🏏 Sports</h3>
+                <p>Sports and recreational activities for students.</p>
+            </div>
+
+            <div class="card">
+                <h3>🚌 Transport</h3>
+                <p>Transportation facilities for students.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="admissions">
+        <h2 class="title">Admissions</h2>
+
+        <div class="about">
+            <p><strong>Step 1:</strong> Check the eligibility criteria.</p>
+            <p><strong>Step 2:</strong> Complete the application form.</p>
+            <p><strong>Step 3:</strong> Submit the required documents.</p>
+            <p><strong>Step 4:</strong> Follow the admission instructions.</p>
+
+            <a href="#contact" class="btn">Enquire Now</a>
+        </div>
+    </section>
+
+    <section id="events">
+        <h2 class="title">College Events</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>🎉 Annual Day</h3>
+                <p>Celebrate student achievements and talents.</p>
+            </div>
+
+            <div class="card">
+                <h3>💡 Technical Fest</h3>
+                <p>Explore innovative ideas and technical projects.</p>
+            </div>
+
+            <div class="card">
+                <h3>🏆 Sports Day</h3>
+                <p>Encourage teamwork and sporting excellence.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2 class="title">Contact Us</h2>
+
+        <p><strong>Address:</strong> Vijayawada, Andhra Pradesh</p>
+        <p><strong>Email:</strong> info@example.com</p>
+        <p><strong>Phone:</strong> +91 98765 43210</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 ABC College. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
